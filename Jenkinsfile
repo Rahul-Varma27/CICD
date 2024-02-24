@@ -8,11 +8,11 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/rahul/Documents/Extractfile/apache-tomcat-9.0.85/webapps'
+			  sh '/home/rahul/Documents/Extractfile/apache-maven-3.9.6'
 	                 }}
 		stage('Deployment'){
 		   steps {
-		sh 'cp target/CICD.war /home/swapnil/Documents/DevOps-Software/apache-tomcat-9.0.79/webapps'
+		sh 'cp target/CICD.war  /home/rahul/Documents/Extractfile/apache-tomcat-9.0.85/webapps'
 			}}	
 }}
 
