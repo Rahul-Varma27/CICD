@@ -8,8 +8,7 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/rahul/Documents/Extractfile/apache-maven-3.9.6
-/bin/mvn install'
+			  sh '/home/rahul/Documents/Extractfile/apache-maven-3.9.6/bin/mvn install'
 	                 }}
 		stage('Deployment'){
 		   steps {
