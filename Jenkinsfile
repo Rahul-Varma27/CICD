@@ -18,5 +18,9 @@ pipeline {
 		stage('Deployment'){
 		   steps {
 		sh 'cp target/CICD.war /home/rahul/Documents/Extractfile/apache-tomcat-9.0.85/webapps'
-			}}	
+		     }}
+		 stage('slack-notification'){
+		   steps {
+                   slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#devops', color: 'good', message: 'This is for Slack', teamDomain: 'student', tokenCredentialId: 'Slack'
+                   }}
 }}
